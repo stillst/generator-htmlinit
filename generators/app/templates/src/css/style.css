@@ -1,0 +1,290 @@
+.col-1 {
+  width: 8.33333333%;
+}
+.col-2 {
+  width: 16.66666667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33333333%;
+}
+.col-5 {
+  width: 41.66666667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33333333%;
+}
+.col-8 {
+  width: 66.66666667%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33333333%;
+}
+.col-11 {
+  width: 91.66666667%;
+}
+.col-12 {
+  width: 100%;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+.line {
+  margin: 0 -20px;
+  font-size: 0;
+}
+.line [class^=col-] {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 20px;
+  font-size: 25px;
+}
+.line--mb {
+  margin-bottom: 30px;
+}
+.row {
+  font-size: 0;
+}
+.row [class^=col-] {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 20px;
+  font-size: 25px;
+}
+.row [class^=col-]:first-child {
+  padding-left: 0;
+}
+.row [class^=col-]:last-child {
+  padding-right: 0;
+}
+.container {
+  margin: 20px auto;
+  width: 1340px;
+  min-height: 1740px;
+  position: relative;
+  background-color: #16a085;
+}
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 25px;
+  color: #fff;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.img-wrap img {
+  width: 100%;
+}
+.back-img {
+  position: absolute;
+  top: 15% ;
+  padding: 0 50px;
+  width: 1340px;
+}
+.main {
+  background-color: #16a085;
+  position: relative;
+  padding: 30px 0;
+  z-index: 9;
+}
+.main__title {
+  font-size: 35px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.main__tizer {
+  text-align: justify;
+  font-size: 31px;
+  margin-bottom: 10px;
+}
+.main__clarification {
+  padding: 10px 0 10px 70px;
+  text-align: justify;
+}
+.main__clarification--uniq {
+  background: url('../img/uniq.png') 0 50% no-repeat;
+  background-size: 50px 50px;
+}
+.main__clarification--palette {
+  background: url('../img/palette.png') 0 50% no-repeat;
+  background-size: 50px 50px;
+}
+.main__clarification--superman {
+  background: url('../img/superman.png') 0 50% no-repeat;
+  background-size: 50px 50px;
+}
+.main__clarification--contract {
+  background: url('../img/contract.png') 0 50% no-repeat;
+  background-size: 50px 50px;
+}
+.main__clarification--help {
+  background: url('../img/help.png') 0 50% no-repeat;
+  background-size: 50px 50px;
+}
+.main:after {
+  content: '';
+  position: absolute;
+  left: 48%;
+  bottom: -39px;
+  border: 20px solid transparent;
+  border-top: 20px solid #16a085;
+}
+.back-link {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  color: #ffee73;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  padding: 10px;
+}
+.header {
+  width: 100%;
+  position: relative;
+  background-color: #845986;
+  padding: 20px 0;
+  z-index: 10;
+}
+.header__photo {
+  width: 110px;
+  height: 110px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.header__title {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 35px;
+}
+.header__cert {
+  text-align: center;
+  font-size: 35px;
+  color: #ffee73;
+}
+.header:after {
+  content: '';
+  position: absolute;
+  left: 48%;
+  bottom: -39px;
+  border: 20px solid transparent;
+  border-top: 20px solid #845986;
+}
+.header .line [class^=col-] {
+  vertical-align: middle;
+}
+.bonuses {
+  background-color: #ecf0f1;
+  padding: 20px 0;
+  color: #2980b9;
+  position: relative;
+  z-index: 8;
+}
+.bonuses__title {
+  font-size: 35px;
+}
+.bonuses__title--dance {
+  color: #2980b9;
+}
+.bonuses__title--cook {
+  color: #ef5f3a;
+}
+.bonuses__title--yoga {
+  color: #845986;
+}
+.bonuses__title--bowl {
+  color: #2c3e50;
+}
+.bonuses__title--surf {
+  color: #16a085;
+}
+.bonuses__title--brothel {
+  color: #e74c3c;
+}
+.bonuses .line [class^=col-] {
+  vertical-align: middle;
+}
+.bonuses-img-wrap {
+  border-radius: 50%;
+  text-align: center;
+}
+.bonuses-img-wrap img {
+  width: 100%;
+  padding: 25px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.bonuses-img-wrap--dance {
+  background-color: #2980b9;
+}
+.bonuses-img-wrap--cook {
+  background-color: #ef5f3a;
+}
+.bonuses-img-wrap--yoga {
+  background-color: #845986;
+}
+.bonuses-img-wrap--bowl {
+  background-color: #2c3e50;
+}
+.bonuses-img-wrap--surf {
+  background-color: #16a085;
+}
+.bonuses-img-wrap--brothel {
+  background-color: #e74c3c;
+}
+.bonuses__txt {
+  text-align: justify;
+}
+.bonuses:after {
+  content: '';
+  position: absolute;
+  left: 48%;
+  bottom: -39px;
+  border: 20px solid transparent;
+  border-top: 20px solid #ecf0f1;
+}
+.footer {
+  background-color: #33414a;
+  padding: 20px 0;
+}
+.footer__title {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.footer .line [class^=col-] {
+  padding: 0 10px;
+}
+.footer__contacts {
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer__contacts a {
+  color: #fff;
+}

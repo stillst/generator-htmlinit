@@ -1,0 +1,44 @@
+{
+  "name": "generator-htmlinit",
+  "version": "0.0.0",
+  "description": "Html tepmplate (start)",
+  "homepage": "https://github.com/stillst/generator-htmlinit",
+  "author": "Gavrilov Stanislav <stas.a.gavrilov@gmail.com> (stgavrilov.com)",
+  "files": [
+    "generators"
+  ],
+  "main": "generators\\index.js",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.21.1",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "yeoman-assert": "^2.0.0",
+    "gulp": "^3.6.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.9.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stillst/generator-htmlinit"
+  },
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stillst/generator-htmlinit/issues"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
