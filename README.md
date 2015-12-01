@@ -8,6 +8,8 @@ First, install [Yeoman](http://yeoman.io) and generator-htmlinit using [npm](htt
 ```bash
 npm install -g yo
 npm install -g generator-htmlinit
+cd generator-htmlinit
+npm link 
 ```
 
 Then generate your new project:

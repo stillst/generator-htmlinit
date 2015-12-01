@@ -9,13 +9,13 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the exceptional ' + chalk.red('generator-htmlinit') + ' generator!'
+      'Hi! I am a ' + chalk.red('html') + ' generator!'
     ));
 
     var prompts = [{
       type: 'confirm',
       name: 'someOption',
-      message: 'Would you like to enable this option?',
+      message: 'It is a perfect time for the begining of some html code, isn it?',
       default: true
     }];
 
