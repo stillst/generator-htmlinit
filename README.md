@@ -1,4 +1,4 @@
-# generator-htmlinit [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-htmlinit
 > Html tepmplate (start)
 
 ## Installation
@@ -9,7 +9,7 @@ First, install [Yeoman](http://yeoman.io) and generator-htmlinit using [npm](htt
 npm install -g yo
 npm install -g generator-htmlinit
 cd generator-htmlinit
-npm link 
+npm link
 ```
 
 Then generate your new project:
@@ -24,7 +24,7 @@ Yeoman has a heart of gold. He&#39;s a person with feelings and opinions, but he
 
 ## License
 
-MIT © [Gavrilov Stanislav](stgavrilov.com)
+MIT ©
 
 
 [npm-image]: https://badge.fury.io/js/generator-htmlinit.svg
