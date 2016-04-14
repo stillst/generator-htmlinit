@@ -16,6 +16,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     cssnano = require('cssnano'),
     autoprefixer = require('autoprefixer'),
+    fileinclude = require('gulp-file-include'),
     //gulpStylelint = require('gulp-stylelint'),
     //stylelint   = require('stylelint'),
     precss = require('precss');
@@ -80,6 +81,16 @@ gulp.task('connect-dist', function() {
 });
 
 // Работа с HTML
+gulp.task('html_compile', function() {
+  gulp.src('src/html/*.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('./src/'));
+});
+
+
 gulp.task('html', function () {
     gulp.src('./src/*.html')
     .pipe(notify({message: 'HTML изменён', onLast: true}))
@@ -134,7 +145,7 @@ gulp.task('css_compile', function () {
     var processors = [
         precss(),
         cssnano({discardComments: {removeAll: true}}),
-        autoprefixer({browsers: ['last 2 versions']}),
+        autoprefixer({browsers: ['> 5%']}),
         //stylelint(stylelintConfig),
     ];
     return gulp.src('src/css/import.css')
@@ -148,10 +159,11 @@ gulp.task('css_compile', function () {
 
 // Слежка
 gulp.task('watch', function () {
-    gulp.watch(['./src/*.html'], ['html']);
-    gulp.watch(['./src/css/modules/**/*.css'], ['css_compile']);
-    gulp.watch(['./src/js/*.js'], ['js']);
-    gulp.watch(['./src/css/style.css'], ['css']);
+    gulp.watch(['./src/html/**/*.html'], ['html_compile']); //собираем html если какой-то из шаблонов html изменился
+    gulp.watch(['./src/*.html'], ['html']); //перезапускаем сервер если html пересобрался
+    gulp.watch(['./src/js/*.js'], ['js']); //перезапускаем сервер если javascript файлы изменились
+    gulp.watch(['./src/css/modules/**/*.css'], ['css_compile']);//собираем style.css если какой-то из шаблонов css изменился
+    gulp.watch(['./src/css/style.css'], ['css']); //перезапускаем сервер если style.css пересобрался
 });
 
 

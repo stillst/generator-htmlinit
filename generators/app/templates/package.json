@@ -9,6 +9,7 @@
     "gulp-clean": "^0.3.1",
     "gulp-connect": "^2.2.0",
     "gulp-cssnano": "^2.1.1",
+    "gulp-file-include": "^0.13.7",
     "gulp-if": "^1.2.5",
     "gulp-less": "^3.0.3",
     "gulp-minify-css": "^1.1.1",
@@ -23,18 +24,5 @@
     "precss": "^1.4.0",
     "stylelint": "^5.4.0",
     "wiredep": "^2.2.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stillst/psychology_school.git"
-  },
-  "author": "stillst",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/stillst/psychology_school/issues"
-  },
-  "homepage": "https://github.com/stillst/psychology_school",
-  "dependencies": {
-    "gulp.spritesmith": "^3.6.1"
   }
 }
