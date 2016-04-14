@@ -1,15 +1,15 @@
 var gulp = require('gulp'),
-	connect = require('gulp-connect'),
-	opn = require('opn'),
-	wiredep = require('wiredep').stream,
-	useref = require('gulp-useref'),
-	gulpif = require('gulp-if'),
-	uglify = require('gulp-uglify'),
-	clean = require('gulp-clean'),
-	less = require('gulp-less'),
-	notify = require('gulp-notify'),
-	minifyCss = require('gulp-minify-css'),
-	spritesmith = require('gulp.spritesmith');
+    connect = require('gulp-connect'),
+    opn = require('opn'),
+    wiredep = require('wiredep').stream,
+    useref = require('gulp-useref'),
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
+    clean = require('gulp-clean'),
+    less = require('gulp-less'),
+    notify = require('gulp-notify'),
+    minifyCss = require('gulp-minify-css'),
+    spritesmith = require('gulp.spritesmith');
 
 // Очистка папки DIST
 gulp.task('clean', function () {
@@ -21,18 +21,17 @@ gulp.task('clean', function () {
 // Копирование статики
 gulp.task('copy_img', function () {
     return gulp.src('src/img/**/*')
-
-     .pipe(gulp.dest('dist/img/'));   
+     .pipe(gulp.dest('dist/img/'));
 });
 
 
 gulp.task('copy_fonts', function () {
     return gulp.src('src/bower/Font-Awesome/fonts/*')
-     .pipe(gulp.dest('dist/fonts/'));   
+     .pipe(gulp.dest('dist/fonts/'));
 });
 
 
-// Склейка, минификация для js и css. А также изменение путей до css* и js* и копирирование их в dist 
+// Склейка, минификация для js и css. А также изменение путей до css* и js* и копирирование их в dist
 gulp.task('dist', function () {
     var assets = useref.assets();
     return gulp.src('src/*.html')
@@ -45,50 +44,50 @@ gulp.task('dist', function () {
 });
 
 // Bower
-gulp.task('bower', function () { 
-	gulp.src('src/*.html')
-		.pipe(wiredep({
-			directory: 'src/bower'
-		}))
-		.pipe(gulp.dest('src'));
+gulp.task('bower', function () {
+    gulp.src('src/*.html')
+        .pipe(wiredep({
+            directory: 'src/bower'
+        }))
+        .pipe(gulp.dest('src'));
 });
 
 // Запуск сервера
 gulp.task('connect', function() {
-	connect.server({
-		root: 'src',
-		livereload: true
-	});
-	opn('http://localhost:8080')
+    connect.server({
+        root: 'src',
+        livereload: true
+    });
+    opn('http://localhost:8080')
 });
 
 // Запуск сервера
 gulp.task('connect-dist', function() {
-	connect.server({
-		root: 'dist'
-	});
-	opn('http://localhost:8080');
+    connect.server({
+        root: 'dist'
+    });
+    opn('http://localhost:8080');
 });
 
-// Работа с html
+// Работа с HTML
 gulp.task('html', function () {
-	gulp.src('./src/*.html')
-	.pipe(connect.reload());
+    gulp.src('./src/*.html')
+    .pipe(connect.reload());
 });
 
 // Работа с CSS
 gulp.task('css', function () {
-	gulp.src('./src/css/*.css')
-	.pipe(connect.reload());
+    gulp.src('./src/css/*.css')
+    .pipe(connect.reload());
 });
 
 // Работа с JS
 gulp.task('js', function () {
-	gulp.src('./src/js/*.js')
-	.pipe(connect.reload());
+    gulp.src('./src/js/*.js')
+    .pipe(connect.reload());
 });
 
-//Компиляция LESS 
+//Компиляция LESS
 gulp.task('less', function () {
     return  gulp.src('src/less/style.less')
     .pipe(less())
@@ -97,15 +96,15 @@ gulp.task('less', function () {
 
 // Слежка
 gulp.task('watch', function () {
-	gulp.watch(['./src/*.html'], ['html']);
-	gulp.watch(['./src/css/*.css'], ['css']);
-	gulp.watch(['./src/js/*.js'], ['js']);
-	gulp.watch(['./src/less/**/*.less'], ['less']);
+    gulp.watch(['./src/*.html'], ['html']);
+    gulp.watch(['./src/css/*.css'], ['css']);
+    gulp.watch(['./src/js/*.js'], ['js']);
+    gulp.watch(['./src/less/**/*.less'], ['less']);
 });
 
 // Спрайты
 gulp.task('sprite', function() {
-    var spriteData = 
+    var spriteData =
         gulp.src('./src/img/_for_sprite/**/*.png') // путь, откуда берем картинки для спрайта
             .pipe(spritesmith({
                 imgName: 'sprite.png',
@@ -115,11 +114,11 @@ gulp.task('sprite', function() {
             }));
     //../img/sprite/sprite.png
     spriteData.img.pipe(gulp.dest('./src/img/sprite/')); // путь, куда сохраняем картинку
-    spriteData.css.pipe(gulp.dest('./src/less/components/')); // путь, куда сохраняем стили
+    spriteData.css.pipe(gulp.dest('./src/less/base/')); // путь, куда сохраняем стили
 });
 
 
-// Задача по-умолчанию 
+// Задача по-умолчанию
 gulp.task('default', ['connect', 'watch']);
 
 // Сборка проекта
