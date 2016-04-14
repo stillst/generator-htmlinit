@@ -1,0 +1,66 @@
+.generate-columns(@n,@i:1) when (@i=<@n)
+{  
+  .col-@{i}
+  {
+    width:(@i*100%/@n);       
+  }
+  .generate-columns(@n, (@i+1));
+}
+
+.generate-columns(12);
+
+.wrapper
+{
+  margin: 0 auto;
+  width: @wrapper-width;
+}
+
+.line
+{  
+  margin:0 -(@wrapper-margin);
+  font-size: 0;  
+  & [class^=col-]
+  {
+    display: inline-block;
+    vertical-align: top;  
+    padding: 0 @wrapper-margin;
+    font-size: @font-size-base;
+  }
+
+  &--mb 
+  {
+    margin-bottom: 30px;
+  }
+}
+
+.row
+{  
+  font-size: 0;  
+  & [class^=col-]
+  {
+    display: inline-block;
+    vertical-align: top;  
+    padding: 0 @wrapper-margin;
+    font-size: @font-size-base;
+  }
+
+  & [class^=col-]:first-child
+  {
+    padding-left:0;
+  }
+
+  & [class^=col-]:last-child
+  {
+    padding-right:0;
+  }
+}
+
+.clearfix 
+{
+  &:after, &:before 
+  {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
