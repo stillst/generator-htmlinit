@@ -1,4 +1,49 @@
 .footer
 {
+    padding-top: 40px;
+    padding-bottom: 35px;
+    background-color: #fff;
+    min-width: $wrapper-width;
 
+    p{
+        margin: 0;
+        font-size: 15px;
+        letter-spacing: 0.3px;
+    }
+
+    &__link{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 15px;
+        letter-spacing: 0.6px;
+        transition: all 0.5s;
+        text-decoration: none;
+        &:hover{
+            color: $dark-sky-blue;
+        }
+    }
+
+    &__tel{
+        text-align: right;
+        font-size: 16px;
+        font-weight: bold;
+        color: $greyish-brown;
+
+        &:before{
+            content: "\f095";
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 18px;
+        }
+
+        &:hover{
+            &:before{
+                animation: tada 2s;
+            }
+        }
+    }
 }
+
+

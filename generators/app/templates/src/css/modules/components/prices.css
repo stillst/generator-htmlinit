@@ -1,0 +1,47 @@
+.prices{
+    text-align: left;
+    padding-top: 55px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #bebebe;
+
+    &__title{
+        margin-bottom: 50px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: 18px;
+
+        thead{
+            border-bottom: 2px solid #bebebe;
+            font-weight: bold;
+        }
+
+        tr{
+
+            border-left: 0;
+            border-right: 0;
+            color: $greyish-brown;
+            &:nth-child(2n) {
+                background-color:rgba(194,151,60, 0.7);;
+
+            }
+        }
+
+        td,th{
+            display: table-cell;
+            vertical-align: middle;
+            padding: 10px;
+
+            a{
+                color: $greyish-brown;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

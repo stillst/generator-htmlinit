@@ -1,0 +1,136 @@
+.steps{
+    padding: 50px 0;
+    text-align: center;
+    min-width: $wrapper-width;
+    color: #999;
+
+    &__title{
+        display: block;
+        position: relative;
+        z-index: 2;
+        font-size: 20px;
+        font-weight: 600;
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 2px;
+    }
+
+    &__txt{
+        position: relative;
+        z-index: 2;
+        width: 180px;
+        margin: 0 auto;
+        color: #333;
+        .diamond{
+            position: absolute;
+            display: inline-block;
+            vertical-align: middle;
+            left: 0;
+            color: #fff;
+            bottom: -10px;
+        }
+    }
+
+     &:hover{
+        .step{
+           &:after{
+                animation:go-go 1s ease-out infinite alternate;
+            }
+        }
+    }
+}
+
+.step{
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    padding-top: 75px;
+    padding-bottom: 60px;
+
+
+
+    &--one{
+
+
+        &:before{
+            content: "1";
+            position: absolute;
+            top:-80px;
+            left:60px;
+            color: rgba(194,151,58,0.6);
+            font-size: 260px;
+
+        }
+
+        &:after{
+            content: "";
+            position: absolute;
+            border: 25px solid transparent;
+            border-left: 43px solid rgba(194,151,58,0.6);
+            right: -70px;
+            top: 90px;
+        }
+    }
+
+    &--two{
+         &:before{
+            content: "2";
+            position: absolute;
+            top:-80px;
+            left:60px;
+            color: rgba(194,151,58,0.6);
+            font-size: 260px;
+        }
+
+        &:after{
+            content: "";
+            position: absolute;
+            border: 25px solid transparent;
+            border-left: 43px solid rgba(194,151,58,0.6);
+            right: -70px;
+            top: 90px;
+        }
+    }
+
+    &--three{
+        &:before{
+            content: "3";
+            position: absolute;
+            top:-80px;
+            left:60px;
+            color: rgba(194,151,58,0.6);
+            font-size: 260px;
+        }
+    }
+
+
+}
+
+
+@keyframes go-go{
+  from{
+    transform: translate(0);
+  }
+  to{
+    transform: translate(50px,0);
+  }
+}
+
+@keyframes go-go-down{
+  from{
+    transform: translate(0);
+  }
+  to{
+    transform: translate(0,30px);
+  }
+}
+
+
+@keyframes spin{
+  from{
+    transform: rotate(45deg);
+  }
+  to{
+    transform: rotate(315deg);
+  }
+}

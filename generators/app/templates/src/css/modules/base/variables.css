@@ -1,31 +1,33 @@
 /*Colors*/
-$blue-basic:#2686c0;
-$blue-darken:darken($blue-basic, 30%);
-$grey-basic:#e0dfe4;
-$grey-section:#dad9de;
-$black-basic:#424242;
-$orange-basic:#ef5f3a;
+$greyish-brown:#4a4a4a;
+$dark-sky-blue:#4a90e2;
+$white-three:#f3f3f3;
+$pinkish-grey:#bebebe;
+$green:#51baa4;
+$gold:#c2973c;
+
+/*OLD-COLORS*/
+$grey-basic: #595959;
+$grey-light: #f8f8f8;
+$blue-dark:#164666;
 $green-basic:#2ecc71;
-$pink-basic: #FC6094;
-$violet-basic: #845986;
-$asphalt-basic:#2c3e50;
-$ametist-basic:#16a085;
-$yellow-basic:#ffee73;
-$red-basic:#e74c3c;
-$blue-basic:#2980b9;
-$white-basic: #ecf0f1;
-$background-basic:#33414a;
+
+/*BG*/
+$bg-basic:rgba(73, 92, 95, .45);
+$bg-dark:rgba(0, 0, 0, .35);
+
 
 /*Sizes*/
+$margin-ok:40px;
+
 $font-size-h1:35px;
 $font-size-h2: round($font-size-h1*0.875);
 $font-size-h3: round($font-size-h1*0.6875);
 $font-size-h4: round($font-size-h1*0.5);
-$font-size-base:25px;
+$font-size-base:14px;
 
 /*Wrappers*/
-$container-width:1340px;
-$wrapper-width:1200px;
+$wrapper-width: 970px;
 $wrapper-padding:20px;
 $wrapper-width-correct:$wrapper-width - $wrapper-padding;
 $wrapper-margin:20px;

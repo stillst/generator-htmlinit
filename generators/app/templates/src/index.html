@@ -1,43 +1,536 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
+        <!-- Meta UTF8 charset -->
         <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="Гаврилов Станислав">
-        <title>Название страницы</title>
+
+        <!-- Viewport specification for mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Basic page information -->
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="./img/favicon.ico">
+
         <!-- build:css css/vendor.css -->
-        <!-- bower:css -->
-        <link href="bower/normalize-css/normalize.css" rel="stylesheet">
-        <link href="bower/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
-        <!-- endbower -->
+               <!-- bower:css -->
+                 <link href="bower/normalize-css/normalize.css" rel="stylesheet">
+                 <link href="bower/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+                 <link href="bower/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+                 <link href="bower/animate.css/animate.min.css" rel="stylesheet">
+                 <link href="bower/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+               <!-- endbower -->
         <!-- endbuild -->
+
         <!-- build:css css/style.css -->
-        <link href="css/style.css" rel="stylesheet">
+            <!-- CSS libraries and styles -->
+            <link href="css/style.css" rel="stylesheet">
         <!-- endbuild -->
+
     </head>
-    <body>
-        <header class="header">
-            <div class="wrapper">
+    <body id="body">
+
+        <div class="dark">
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <a href="#contacts" class="footer-label uppercase">
+                        <span class="button button-icon-clear pull-left" data-animate="fadeInUp">
+                            <i class="fa fa-phone"></i>
+                        </span>
+                        <span class="pull-left header-tel" data-animate="fadeInUp">+79817065839</span>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-6 text-right">
+                    <div class="pull-right">
+                        <a href="https://new.vk.com/permanent_mua" class="button button-icon-clear" data-animate="fadeInUp" data-delay="300*index"><i class="fa fa-vk"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100006427954202" class="button button-icon-clear" data-animate="fadeInUp" data-delay="300*index"><i class="fa fa-facebook"></i></a>
+                        <a href="mailto:ask@master-tatuazha.ru" class="button button-icon-clear" data-animate="fadeInUp" data-delay="300*index"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
             </div>
-        </header>
-        <main class="main">
-            <div class="wrapper">
+        </div>
+    </div>
+
+    <section class="expandable">
+        <a href="/" class="diamond">
+            <span class="background"></span>
+            <span class="line1"></span>
+            <span class="line2"></span>
+        </a>
+        <div class="expandable-content dark">
+            <div class="container padding-tq-top padding-minus-tq-bottom">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="sub-heading">Популярные статьи</div>
+                        <div class="iconed">
+                            <i class="iconed-icon fa fa-book"></i>
+                            <ul class="list list-sided">
+                                <li>
+                                    <div class="stamp color-darker pull-right">05 Мая</div>
+                                    <a href="#">Первая статья</a>
+                                </li>
+                                <li>
+                                    <div class="stamp color-darker pull-right">06 Июня</div>
+                                    <a href="#">Первая статья</a>
+                                </li>
+                                <li>
+                                    <div class="stamp color-darker pull-right">27 Июля</div>
+                                    <a href="#">Первая статья</a>
+                                </li>
+                                <li>
+                                    <div class="stamp color-darker pull-right">29 Июля</div>
+                                    <a href="#">Первая статья</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="sub-heading"><a href="">Последние отзывы</a></div>
+                        <div class="iconed">
+                            <i class="iconed-icon fa fa-vk"></i>
+                            <div class="roller">
+                                <ul class="list no-style roller-list">
+                                    <li>
+                                        <p class="small condensed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="#">http://t.co/savannah</a> ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                                        <p class="small condensed color-darker">35 minutes ago, <a href="#">@savannah</a></p>
+                                    </li>
+                                    <li>
+                                        <p class="small condensed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="#">http://t.co/savannah</a>.</p>
+                                        <p class="small condensed color-darker">50 minutes ago, <a href="#">@savannah</a></p>
+                                    </li>
+                                    <li>
+                                        <p class="small condensed">Lorem ipsum dolor sit amet, consectetur.</p>
+                                        <p class="small condensed color-darker">2 days ago, <a href="#">@savannah</a></p>
+                                    </li>
+                                </ul>
+                                <a href="#" class="button button-small button-icon roller-prev"><i class="fa fa-chevron-left"></i></a>
+                                <a href="#" class="button button-small button-icon roller-next"><i class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="sub-heading">Наша команда</div>
+                        <div class="iconed">
+                            <i class="iconed-icon fa fa-flickr"></i>
+                            <div class="flickr-widget">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="flickr-widget-item">
+                                           <img src="img/team/team-1.jpg" alt="" /><span class="hover"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="flickr-widget-item">
+                                            <a href="#"><img src="img/team/team-2.jpg" alt="" /><span class="hover"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="flickr-widget-item">
+                                            <a href="#"><img src="img/team/team-3.jpg" alt="" /><span class="hover"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="flickr-widget-item">
+                                            <a href="#"><img src="img/team/team-4.jpg" alt="" /><span class="hover"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="flickr-widget-item">
+                                            <a href="#"><img src="img/team/team-5.jpg" alt="" /><span class="hover"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="flickr-widget-item">
+                                            <a href="#"><img src="img/team/team-6.jpg" alt="" /><span class="hover"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </main>
+        </div>
+    </section>
+</div>
+
+<!-- Hero -->
+<div id="hero" data-multibackground="debug" data-multibackground-layer-0-type="image" data-multibackground-layer-0-attachment="static" data-multibackground-layer-0-url="img/hero_3.jpg" data-multibackground-layer-1-type="pattern" data-multibackground-layer-1-attachment="fixed" data-multibackground-layer-1-url="./img/overlay.png">
+    <div class="container">
+        <div class="content padding-top padding-tq-bottom text-center">
+            <div class="hero-heading uppercase" data-animate="bounceIn" data-group="1"><span>Мастер Татуажа</span></div>
+            <div class="hero-subheading uppercase" data-animate="flipInY" data-delay="300" data-group="1" data-rotate-1="Beautiful person" data-rotate-2="Amateur guitar player" data-rotate-speed="5000" data-rotate-delay="0">Professional photographer</div>
+            <div class="hero-amp" data-animate="flipInY" data-delay="600" data-group="1" data-rotate-1="&amp;" data-rotate-2="&amp;" data-rotate-speed="5000" data-rotate-delay="300">&amp;</div>
+            <div class="hero-handscript lowercase" data-animate="flipInY" data-delay="900" data-group="1" data-rotate-1="People lover" data-rotate-2="Awesome story teller" data-rotate-speed="5000" data-rotate-delay="600">Graphic designer</div>
+            <div class="cover-space hidden-sm hidden-xs"></div>
+        </div>
+    </div>
+    <div class="cover hidden-sm hidden-xs" data-animate="fadeInDown" data-delay="350">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="header-ava">
+            <img src="img/ava.jpg" alt="" />
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar mb-0" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand" data-animate="fadeInDown" data-delay="300"><span>Мастер татутажа</span></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#"><span>О нас<span class="tl"></span><span class="br"></span></span></a>
+                </li>
+                <li>
+                    <a href="#"><span>Услуги<span class="tl"></span><span class="br"></span></span></a>
+                </li>
+                <li>
+                    <a href="#"><span>Контакты<span class="tl"></span><span class="br"></span></span></a>
+                </li>
+                <li><a href="#contacts"><span>Цены<span class="tl"></span><span class="br"></span></span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        <!-- Теxt-block -->
+        <div class="container mt-100">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                    <p data-animate="flipInY" data-delay="300*index" data-group="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor in cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    <p data-animate="flipInY" data-delay="300*index" data-group="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="sub-heading" data-animate="fadeInRight" data-group="1">Наши преимущества</div>
+                    <ul class="list custom-bullets">
+                        <li data-animate="fadeInRight" data-delay="300*index" data-group="2"><span class="bullet"></span>Effective problem solver</li>
+                        <li data-animate="fadeInRight" data-delay="300*index" data-group="2"><span class="bullet"></span>Tactful and patient communicator</li>
+                        <li data-animate="fadeInRight" data-delay="300*index" data-group="2"><span class="bullet"></span>Good team player</li>
+                        <li data-animate="fadeInRight" data-delay="300*index" data-group="2"><span class="bullet"></span>Loyal to the company</li>
+                        <li data-animate="fadeInRight" data-delay="300*index" data-group="2"><span class="bullet"></span>Success motivated</li>
+                        <li data-animate="fadeInRight" data-delay="300*index" data-group="2"><span class="bullet"></span>Creative & hard working</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 padding-minus-bottom">
+                    <p data-animate="flipInY" data-delay="300*index" data-group="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor in cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order -->
+<section data-multibackground="debug"
+    data-multibackground-layer-0-type="image"
+    data-multibackground-layer-0-attachment="static"
+    data-multibackground-layer-0-url="img/parallax-cv.jpg"
+    data-multibackground-layer-0-transitionloaded="linear,0"
+    data-multibackground-layer-1-type="pattern"
+    data-multibackground-layer-1-attachment="fixed"
+    data-multibackground-layer-1-url="img/overlay.png"
+    data-multibackground-layer-1-transitionloaded="linear,0">
+    <div class="padding-tq-top padding-minus-tq-bottom text-center">
+        <div class="content">
+            <div class="container">
+                <a href="#" class="button button-big js-open-popup" data-animate="flipInY" data-group="1"><span class="icon"><i class="fa fa-envelope"></i></span>Написать нам</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+         <div class="advantages bb mb-50">
+    <div class="wrapper">
+        <div class="line">
+            <div class="col-3 col-s-12">
+                <div class="advantages__item advantages__item--quality">
+                    <span class="advantages__item-title">Заботимся о безопасности</span>
+                    <p class="advantages__item-txt">Следим за стерильностью и приступим к процедуре только после подробного обсуждения</p>
+                </div>
+            </div>
+            <div class="col-3 col-s-12">
+                <div class="advantages__item advantages__item--expert">
+                    <span class="advantages__item-title">Мастера - профессионалы</span>
+                    <p class="advantages__item-txt">Наши мастера имеют за плечами большой опыт и квалификацию подтверждённую сертификатами</p>
+                </div>
+            </div>
+            <div class="col-3 col-s-12">
+                <div class="advantages__item advantages__item--love">
+                    <span class="advantages__item-title">Внимание к клиенту</span>
+                    <p class="advantages__item-txt">Мы подберём для вас татуаж с учетом особенностей глаз, волос, формы лица и предпочтений</p>
+                </div>
+            </div>
+            <div class="col-3 col-s-12">
+                <div class="advantages__item advantages__item--responsibility">
+                    <span class="advantages__item-title">Следим за новинками</span>
+                    <p class="advantages__item-txt">Наши мастера в курсе последних методик татуажа и пользуются только самыми современными инструментами</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Testimonials section -->
+<section data-multibackground="debug"
+         data-multibackground-layer-0-type="image"
+         data-multibackground-layer-0-attachment="static"
+         data-multibackground-layer-0-url="img/bg_1.jpg"
+         data-multibackground-layer-0-transitionloaded="linear,0"
+         data-multibackground-layer-1-type="pattern"
+         data-multibackground-layer-1-attachment="fixed"
+         data-multibackground-layer-1-url="img/overlay.png"
+         data-multibackground-layer-1-transitionloaded="linear,0"><!-- :COMDOC:PARALLAX -->
+    <div class="padding-tq-top padding-minus-tq-bottom">
+        <div class="content">
+            <div class="container">
+
+                <div class="text-center">
+                    <p class="hero-heading section-heading-my bounceIn animated">
+                        <a href="<?php echo get_page_link(13);?>">Отзывы</a>
+                    </p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-6 col-md-6 col-sm-6">
+                        <div class="testimonials roller" data-animate="flipInY">
+                            <div class="testimonials-box clearfix">
+                                <ul class="list no-list-margin no-style roller-list">
+                                    <li class="clearfix">
+                                        <img src="img/testimonial.jpg" class="testimonials-image pull-right" alt="" />
+                                        <div class="testimonials-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+
+                                        <a class="testimonials-name" href="#">Бодрова Света</a>
+                                    </li>
+                                    <li class="clearfix">
+                                        <img src="img/testimonial.jpg" class="testimonials-image pull-right" alt="" />
+                                        <div class="testimonials-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                        </div>
+                                        <a class="testimonials-name" href="#">Бодрова Света</a>
+                                    </li>
+                                    <li class="clearfix">
+                                        <img src="img/testimonial.jpg" class="testimonials-image pull-right" alt="" />
+                                        <div class="testimonials-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        </div>
+                                        <a class="testimonials-name" href="#">Бодрова Света</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="testimonials-bullets roller-bullets"></div>
+                            <!-- <div class="testimonials-by text-right pull-right">
+                                <div class="testimonials-arrow testimonials-arrow-left"></div>
+                                <ul class="list no-list-margin no-style roller-list">
+                                    <li>
+                                        <h4 class="white">John Liebher</h4>
+                                        <div class="aff">CEO at Liebher &amp; Co.</div>
+                                    </li>
+                                    <li>
+                                        <h4 class="white">John Liebher</h4>
+                                        <div class="aff">CEO at Liebher &amp; Co.</div>
+                                    </li>
+                                    <li>
+                                        <h4 class="white">John Liebher</h4>
+                                        <div class="aff">CEO at Liebher &amp; Co.</div>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+         <div class="steps bb">
+    <div class="wrapper">
+        <div class="line">
+            <div class="col-4 col-s-12">
+                <div class="step step--one">
+                    <span class="steps__title">
+                        Позвоните нам
+                    </span>
+                    <div class="steps__txt">
+                        Расскажите нам о себе, выбранной услуге и запишитесь на процедуру
+                        <div class="diamond fadeInUp animated">
+                            <div class="background"></div>
+                            <div class="icon"><i class="fa fa-phone"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-s-12">
+                <div class="step step--two">
+                    <span class="steps__title">
+                        Сделайте татуаж
+                    </span>
+                    <div class="steps__txt">
+                        Приезжайте к нам в салон красоты или договоритесь о встрече на дому
+                        <div class="diamond fadeInUp animated">
+                            <div class="background"></div>
+                            <div class="icon"><i class="fa fa-paint-brush"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-s-12">
+                <div class="step step--three">
+                    <span class="steps__title">
+                        Наслаждайтесь результатом
+                    </span>
+                    <div class="steps__txt">
+                        Принимайте работу мастера, и становитесь ещё более обворожительной
+                        <div class="diamond fadeInUp animated">
+                            <div class="background"></div>
+                            <div class="icon"><i class="fa fa-heart"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div id="numbers" class="numbers bb">
+    <div class="wrapper">
+        <div class="line">
+            <div class="col-3 col-m-6 col-s-12">
+                <span id="js-numbers__number--exp" class="numbers__number">
+                    3
+                </span>
+                <p class="numbers__txt">
+                    года опыта в татуже
+                </p>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <span id="js-numbers__number--spec" class="numbers__number">
+                    5
+                </span>
+                <p class="numbers__txt">
+                    высококлассных специалистов
+                </p>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <span id="js-numbers__number--ref" class="numbers__number">
+                    700+
+                </span>
+                <p class="numbers__txt">
+                    довольных девушек
+                </p>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <span id="js-numbers__number--rate" class="numbers__number">
+                    800+
+                </span>
+                <p class="numbers__txt">
+                    проведённых процедур
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div class="form-extra bb" id="form-extra">
+    <div class="wrapper">
+        <form action="">
+            <p class="form-extra__title">
+               Доверьте проблему профессионалам
+            </p>
+
+            <p class="form-extra__sub-title">
+                Оставьте заявку и мы перезвоним вам
+            </p>
+            <p>
+                <span>
+                    <input type="text" placeholder="Имя">
+                </span>
+
+                <span>
+                    <input type="text" placeholder="Телефон">
+                </span>
+
+                <button class="button button-big flipInY animated" data-group="1">
+                    <span class="icon">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                    Написать нам
+                </button>
+            </p>
+        </form>
+    </div>
+</div>
+
         <footer class="footer">
-            <div class="wrapper">
+    <div class="wrapper">
+        <div class="line">
+            <div class="col-3 col-m-6 col-s-6">
+                <p><a class="footer__link" href="#">Отзывы</a></p>
+                <p><a class="footer__link" href="#">Ответы на вопросы</a></p>
             </div>
-        </footer>
+            <div class="col-3 col-m-6 col-s-6">
+                <p><a class="footer__link" href="">Вакансии</a></p>
+                <p><a class="footer__link" href="">Карта сайта</a></p>
+            </div>
+            <div class="col-3 col-m-6 col-s-6">
+                <p>г. Санкт-Петербург</p>
+                 <p>ул. Профессора Попова 4</p>
+            </div>
+            <div class="col-3 col-m-6 col-s-6">
+                <span class="footer__tel">
+                    +7 (XXX) XXX-XX-XX
+                </span>
+                 <p>info@remont-holodilnika.su</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <div class="popup" id="js-popup-form">
+    <form action="#">
+          <div class="popup-form__close" id="js-popup-form__close">
+              <i class="fa fa-times" aria-hidden="true"></i>
+          </div>
+          <p class="popup-form__head">
+            Оставьте заявку и мы вам перезвоним
+          </p>
+          <span>
+            <input type="text" aria-invalid="false" placeholder="Имя">
+          </span>
+          <span>
+            <input type="email" placeholder="Телефон" required="required">
+          </span>
+          <button class="button button-big flipInY animated" data-group="1">
+              <span class="icon">
+                  <i class="fa fa-envelope"></i>
+              </span>
+              Оставить заявку
+          </button>
+    </form>
+</div>
+
+        	<!-- JS libraries -->
+            <script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
+            <script type="text/javascript" src="bower/countUp.js/dist/countUp.min.js"></script>
+            <script type="text/javascript" src="bower/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+            <script type="text/javascript" src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
+
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
-    <!-- build:js js/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower/jquery/dist/jquery.min.js">
-    </script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:js js/script.js -->
-    <script src="js/script.js">
-    </script>
-    <!-- endbuild -->
 </html>

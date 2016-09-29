@@ -17,8 +17,6 @@ var gulp = require('gulp'),
     cssnano = require('cssnano'),
     autoprefixer = require('autoprefixer'),
     fileinclude = require('gulp-file-include'),
-    //gulpStylelint = require('gulp-stylelint'),
-    //stylelint   = require('stylelint'),
     precss = require('precss');
 
 
@@ -93,7 +91,7 @@ gulp.task('html_compile', function() {
 
 gulp.task('html', function () {
     gulp.src('./src/*.html')
-    .pipe(notify({message: 'HTML изменён', onLast: true}))
+    // .pipe(notify({message: 'HTML изменён', onLast: true}))
     .pipe(connect.reload());
 });
 
@@ -107,44 +105,16 @@ gulp.task('css', function () {
 // Работа с JS
 gulp.task('js', function () {
     gulp.src('./src/js/*.js')
-    .pipe(notify({message: 'HTML изменён', onLast: true}))
+    .pipe(notify({message: 'JS изменён', onLast: true}))
     .pipe(connect.reload());
 });
-
-
-
-// var stylelintConfig = {
-//     "rules": {
-//       "block-no-empty": true,
-//       "color-no-invalid-hex": true,
-//       "declaration-colon-space-after": "always",
-//       "declaration-colon-space-before": "never",
-//       "function-comma-space-after": "always",
-//       "function-url-quotes": "double",
-//       "media-feature-colon-space-after": "always",
-//       "media-feature-colon-space-before": "never",
-//       "media-feature-name-no-vendor-prefix": true,
-//       "max-empty-lines": 5,
-//       "number-leading-zero": "never",
-//       "number-no-trailing-zeros": true,
-//       "property-no-vendor-prefix": true,
-//       "rule-no-duplicate-properties": true,
-//       "declaration-block-no-single-line": true,
-//       "rule-trailing-semicolon": "always",
-//       "selector-list-comma-space-before": "never",
-//       "selector-list-comma-newline-after": "always",
-//       "selector-no-id": true,
-//       "string-quotes": "double",
-//       "value-no-vendor-prefix": true
-//     }
-//   }
 
 
 // Компиляция CSS
 gulp.task('css_compile', function () {
     var processors = [
         precss(),
-        cssnano({discardComments: {removeAll: true}}),
+        cssnano({discardComments: {removeAll: true}, zindex: false}),
         autoprefixer({browsers: ['> 5%']}),
         //stylelint(stylelintConfig),
     ];
@@ -159,6 +129,7 @@ gulp.task('css_compile', function () {
 
 // Слежка
 gulp.task('watch', function () {
+    gulp.watch(['./src/html/**/*.php'], ['html_compile']); //собираем html если какой-то из шаблонов php изменился
     gulp.watch(['./src/html/**/*.html'], ['html_compile']); //собираем html если какой-то из шаблонов html изменился
     gulp.watch(['./src/*.html'], ['html']); //перезапускаем сервер если html пересобрался
     gulp.watch(['./src/js/*.js'], ['js']); //перезапускаем сервер если javascript файлы изменились
@@ -170,16 +141,15 @@ gulp.task('watch', function () {
 // Спрайты
 gulp.task('sprite', function() {
     var spriteData =
-        gulp.src('./src/img/_for_sprite/**/*.png') // путь, откуда берем картинки для спрайта
+        gulp.src('./src/img/_for_sprite/*.png') // путь, откуда берем картинки для спрайта
             .pipe(spritesmith({
                 imgName: 'sprite.png',
-                cssName: 'sprite.less',
-                cssFormat :'less',
-                padding: 10,
+                cssName: 'sprite_.css',
+                cssFormat :'css',
+                padding: 10
             }));
-    //../img/sprite/sprite.png
-    spriteData.img.pipe(gulp.dest('./src/img/sprite/')); // путь, куда сохраняем картинку
-    spriteData.css.pipe(gulp.dest('./src/less/base/')); // путь, куда сохраняем стили
+    spriteData.img.pipe(gulp.dest('./src/img/')); // путь, куда сохраняем картинку
+    spriteData.css.pipe(gulp.dest('./src/css/modules/components/')); // путь, куда сохраняем стили
 });
 
 
@@ -188,13 +158,3 @@ gulp.task('default', ['connect', 'watch']);
 
 // Сборка проекта
 gulp.task('compile', ['dist', 'copy_img', 'copy_fonts']);
-
-
-//Компиляция LESS
-// gulp.task('less', function () {
-//     return  gulp.src('src/less/style.less')
-//     .pipe(less())
-//     .pipe(gulp.dest('src/css'));
-// });
-//less = require('gulp-less'),
-//minifyCss = require('gulp-minify-css'),

@@ -1,3 +1,10 @@
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .col-1 {
   width: 8.33333333%;
 }
@@ -38,46 +45,20 @@
 .wrapper
 {
   margin: 0 auto;
+  padding: 0 15px;
   width: $wrapper-width;
 }
 
 .line
 {
-  margin:0 -($wrapper-margin);
   font-size: 0;
+  margin: 0 -$wrapper-margin;
   & [class^=col-]
   {
     display: inline-block;
     vertical-align: top;
-    padding: 0 $wrapper-margin;
+    padding:0 $wrapper-margin;
     font-size: $font-size-base;
-  }
-
-  &--mb
-  {
-    margin-bottom: 30px;
-  }
-}
-
-.row
-{
-  font-size: 0;
-  & [class^=col-]
-  {
-    display: inline-block;
-    vertical-align: top;
-    padding: 0 $wrapper-margin;
-    font-size: $font-size-base;
-  }
-
-  & [class^=col-]:first-child
-  {
-    padding-left:0;
-  }
-
-  & [class^=col-]:last-child
-  {
-    padding-right:0;
   }
 }
 
@@ -89,4 +70,28 @@
     display: table;
     clear: both;
   }
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+
+.mb-100{
+    margin-bottom: 100px;
+}
+
+.pt-50{
+  padding-top: 50px;
+}
+
+.bb{
+  border-bottom: 2px solid $gold;
+}
+
+.mb-0{
+  margin-bottom: 0;
+}
+
+.mt-100{
+  margin-top: 100px;
 }

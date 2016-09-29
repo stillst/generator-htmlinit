@@ -1,0 +1,82 @@
+.team{
+    padding-top: 55px;
+    padding-bottom: 50px;
+
+    &__title{
+        @mixin title;
+    }
+
+    &__img{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+
+
+        img{
+           transition: all 0.6s;
+           height: 435px;
+           width: 100%;
+        }
+
+        &:hover{
+            img{
+                transform:scale(1.2);
+            }
+        }
+    }
+
+
+    &__diamond{
+        position: absolute;
+        z-index: 10;
+        bottom: 57px;
+        left: 10px;
+
+    }
+
+    &__txt{
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: #fff;
+        margin: auto;
+
+        padding: 7px 0;
+        padding-left: 20px;
+        background-color: rgba(194,151,60, .9);
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        margin: 0 -20px;
+
+        li{
+            display: inline-block;
+            vertical-align: middle;
+            width: 33.333333%;
+            padding: 0 20px;
+            margin-bottom: 40px;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        p{
+            font-size: 15px;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        span{
+            font-size: 18px;
+            display: block;
+            letter-spacing: .5px;
+            font-weight: bold;
+        }
+    }
+}

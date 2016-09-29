@@ -1,9 +1,33 @@
+/*
+@import 'modules/theme/bootstrap.css';
+@import 'modules/theme/styles.css';
+@import 'modules/theme/retina.css';
+@import 'modules/theme/small.css';
+@import 'modules/theme/medium.css';
+@import 'modules/theme/less.css';
+@import 'modules/theme/less-small.css';
+@import 'modules/theme/gold.css';
+*/
+
 @import 'modules/base/variables.css';
+@import 'modules/base/mixins.css';
 @import 'modules/base/layout.css';
-@import 'modules/base/btns.css';
 @import 'modules/base/forms.css';
 @import 'modules/base/typography.css';
-@import 'modules/base/mixins.css';
+
+@import 'modules/components/advantages.css';
+@import 'modules/components/numbers.css';
+@import 'modules/components/steps.css';
+@import 'modules/components/breadcrumbs.css';
+@import 'modules/components/team.css';
+@import 'modules/components/faq.css';
+@import 'modules/components/prices.css';
+@import 'modules/components/feedback.css';
+@import 'modules/components/links.css';
+@import 'modules/components/txt.css';
+@import 'modules/components/galery.css';
 @import 'modules/components/header.css';
 @import 'modules/components/footer.css';
-@import 'modules/pages/index.css';
+
+@import 'modules/base/adoptive.css';
+@import 'modules/components/fix.css';

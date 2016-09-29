@@ -1,4 +1,6 @@
 node_modules
 src/bower
-design
+_design
+_doc
 tmp
+dist

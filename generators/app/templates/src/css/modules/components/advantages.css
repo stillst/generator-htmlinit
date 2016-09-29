@@ -1,0 +1,74 @@
+.advantages{
+    padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: center;
+    color: $greyish-brown;
+    min-width: $wrapper-width;
+
+    &__item{
+        display: inline-block;
+        vertical-align: top;
+
+        &:hover{
+               &:before{
+                    /*transform: scale(1.2, 1.2);*/
+                    animation: tada 2s;
+              }
+        }
+
+        &:before{
+            content: "";
+            display: block;
+            width: 95px;
+            height: 95px;
+            font: normal normal normal 14px/1 FontAwesome;
+            margin: 0 auto;
+            margin-bottom: 35px;
+            border: 1px solid $gold;
+            font-size: 35px;
+            color: $gold;
+            border-radius:50%;
+            padding-top: 28px;
+        }
+
+
+        &--quality{
+            &:before{
+                content: "\f015";
+            }
+        }
+
+         &--expert{
+            &:before{
+                content: "\f19d";
+            }
+        }
+
+        &--love{
+            &:before{
+                content: "\f08a";
+            }
+        }
+
+        &--responsibility{
+            &:before{
+                content: "\f290";
+            }
+        }
+
+
+    }
+
+    &__item-title{
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+
+    &__item-txt{
+        width: 220px;
+        margin: 0 auto;
+    }
+}

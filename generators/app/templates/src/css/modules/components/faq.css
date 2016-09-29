@@ -1,0 +1,97 @@
+.faq{
+
+    padding: 54px 0;
+    font-size: 0;
+
+    &__title{
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 1.17;
+        letter-spacing: 0.8px;
+        margin-bottom: 52px;
+        color: $greyish-brown;
+    }
+
+    ul{
+        display: inline-block;
+        vertical-align: top;
+        padding: 0;
+        margin: 0;
+        width: 50%;
+    }
+
+    li{
+
+        margin-bottom: 15px;
+
+        &:before{
+            content: "\f29c";
+            display: inline-block;
+            vertical-align: top;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 40px;
+            color: $gold;
+            margin-right: 12px;
+            margin-top: 8px;
+        }
+    }
+
+    &__q{
+        display: inline-block;
+        vertical-align: top;
+        max-width: 420px;
+        p{
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.5;
+            letter-spacing: 0.4px;
+            color: $greyish-brown;
+            padding: 0;
+            margin: 0;
+        }
+        span{
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.5;
+            color: $gold;
+            cursor: pointer;
+
+            &:after{
+                content: "\f0a7";
+                font: normal normal normal 14px/1 FontAwesome;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 5px;
+            }
+        }
+
+        &--open{
+            span{
+                &:after{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    &__a{
+        display: none;
+        padding-left: 50px;
+        padding-top: 20px;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.5;
+        color: #4a4a4a;
+    }
+}
+
+
+.faq li:hover{
+    &:before{
+        animation: bounce 2s;
+    }
+}
+

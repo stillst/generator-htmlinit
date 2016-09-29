@@ -1,0 +1,39 @@
+.breadcrumbs{
+    font-size: 0;
+    padding:20px 0;
+    margin-bottom: 20px;
+    background-color: $white-three;
+    color:$greyish-brown;
+
+    li{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 15px;
+
+        a{
+            text-decoration: none;
+            color: $greyish-brown;
+            transition:color 0.5s;
+
+            &:hover{
+                color:$gold;
+            }
+        }
+
+        h1{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 15px;
+            padding: 0;
+            margin: 0;
+            font-weight: normal;
+        }
+    }
+
+    li + li:before {
+        display: inline-block;
+        vertical-align: bottom;
+        padding: 0 0 0 7px;
+        content: "/\00a0";
+    }
+}

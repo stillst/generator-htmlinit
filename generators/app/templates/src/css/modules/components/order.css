@@ -1,0 +1,25 @@
+.order{
+
+    padding-top: 68px;
+    padding-bottom: 56px;
+    color: $greyish-brown;
+    text-align: center;
+    min-width: $wrapper-width;
+    &__title{
+        font-size: 24px;
+    }
+
+    &__txt{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    &__btn{
+        @mixin btn;
+        transition: all 0.5s;
+
+        &:hover{
+            background-color: $green;
+        }
+    }
+}
